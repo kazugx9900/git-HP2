@@ -1,0 +1,294 @@
+@charset "UTF-8";
+
+/* 共通  */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+    "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color: #432;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.page-title {
+  font-size: 5rem;
+  font-family: "Philosopher", serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.sub-title {
+  font-size: 1.375rem;
+  padding: 0 8px 8px;
+  border-bottom: 2px rgb(148, 218, 49) solid;
+  font-weight: normal;
+}
+
+.button {
+  font-size: 1.375rem;
+  background: #764017;
+  color: #fff;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+
+.button:hover {
+  background: #c98957;
+}
+
+iframe {
+  width: 100%;
+}
+
+/* HEADER　ここから */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 80px;
+  margin-top: 14px;
+}
+
+.main-nav {
+  display: flex;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-left: 36px;
+}
+
+.main-nav a {
+  color: #432;
+}
+
+.main-nav a:hover {
+  color: rgb(148, 218, 49);
+}
+
+/* HOME　ここから */
+#home {
+  background-image: url(../images/cho5.jpg);
+  min-height: 100vh;
+}
+
+#home .page-title {
+  text-transform: none;
+}
+
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
+
+/* サイドバー */
+aside {
+  width: 22%;
+}
+
+.sub-menu {
+  margin-bottom: 60px;
+  list-style: none;
+}
+
+.sub-menu li {
+  border-bottom: 1px #ddd solid;
+}
+
+.sub-menu a {
+  color: #432;
+  padding: 10px;
+  display: block;
+}
+
+.sub-menu a:hover {
+  color: rgb(148, 218, 49);
+}
+
+aside p {
+  padding: 12px 10px;
+}
+
+/* MENU　ここから */
+#menu {
+  background-image: url(../images/cho5.jpg);
+  min-height: 100vh;
+}
+
+.menu-content {
+  max-width: 560px;
+  margin-top: 10%;
+}
+
+.menu-content .page-title {
+  text-align: center;
+}
+
+.menu-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 0;
+}
+
+.grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+/* ACCESS　ここから */
+#contact {
+  background-image: url(../images/contact-bg.jpg);
+  min-height: 100vh;
+}
+
+form div {
+  margin-bottom: 14px;
+}
+label {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  border: solid rgb(154, 152, 152) 1px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  max-width: 240px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 480px;
+  height: 6rem;
+  border: solid rgb(154, 152, 152) 1px;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* 店舗情報・地図 */
+#location {
+  padding: 4% 0;
+}
+#location .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.location-info {
+  width: 22%;
+}
+.location-info p {
+  padding: 12px 10px;
+}
+.location-map {
+  width: 74%;
+}
+
+/* フッター　ここから */
+footer {
+  background: #432;
+  text-align: center;
+  padding: 26px 0;
+}
+footer p {
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+/* モバイル版　ここから */
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+  .page-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* HEADER */
+  .main-nav {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  .main-nav li {
+    margin: 0 20px;
+  }
+
+  /* HOME */
+  .home-content {
+    margin-top: 20%;
+  }
+
+  /* MENU */
+  .menu-content {
+    margin-top: 20%;
+  }
+
+  /* ACCESS */
+  #contact .page-title {
+    margin-top: 40px;
+  }
+
+  /* フォーム */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    max-width: 100%;
+  }
+
+  /* 店舗情報・地図 */
+  #location .wrapper,
+  .wrapper {
+    flex-direction: column;
+  }
+  .location-info,
+  .location-map {
+    width: 100%;
+  }
+}
